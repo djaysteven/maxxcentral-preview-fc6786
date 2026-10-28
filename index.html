@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("pattaya-demo-theme");
+        if (t !== "light" && t !== "dark") t = "dark";
+        document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.style.colorScheme = t;
+        var l = localStorage.getItem("pattaya-demo-lang");
+        if (l !== "th" && l !== "en") l = "en";
+        document.documentElement.lang = l;
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        document.documentElement.style.colorScheme = "dark";
+        document.documentElement.lang = "en";
+      }
+    })();
+  </script>
+  <style>html[lang="en"] .th{display:none}html[lang="th"] .en{display:none}</style>
+  <meta name="color-scheme" content="dark light" />
+  <title>MAXXCENTRAL — plan book</title>
+  <meta name="description" content="MAXXCENTRAL condotel, Pattaya. 47 furnished studios and one-bedroom suites on 3rd Road Soi 14. Plan book demo using the published site only." />
+  <meta name="geo.region" content="TH-20" />
+  <meta name="geo.placename" content="Pattaya" />
+  <meta name="geo.position" content="12.930205;100.891201" />
+  <link rel="icon" href="images/logo/logocentral-original.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Noto+Sans+Thai:wght@400;500;600;700&family=Noto+Serif+Thai:wght@500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#plans"><span class="en">Skip to plans</span><span class="th">ข้ามไปแปลน</span></a>
+  <header class="site-header">
+    <a class="brand" href="#top">
+      <span class="brand-plate"><img src="images/logo/logocentral-original.png" alt="MAXX Central" /></span>
+      <span class="brand-name"><strong>MAXXCENTRAL</strong><span class="en">Condotel · Pattaya</span><span class="th">คอนโดเทล · พัทยา</span></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary">
+      <a href="#residences"><span class="en">Residences</span><span class="th">ที่พัก</span></a>
+      <a href="#plans"><span class="en">Plans</span><span class="th">แปลน</span></a>
+      <a href="#location"><span class="en">Location</span><span class="th">ที่ตั้ง</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="th">ติดต่อ</span></a>
+    </nav>
+    <div class="cluster">
+      <button type="button" class="theme-btn" data-theme-toggle aria-pressed="false" aria-label="Use light theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3.5"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M16 3.2A8.5 8.5 0 1 0 20.8 14 7 7 0 0 1 16 3.2z"/></svg>
+      </button>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="th" aria-pressed="false">
+          <svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#A51931"/><rect y="2.7" width="24" height="10.6" fill="#F4F5F8"/><rect y="5.35" width="24" height="5.3" fill="#2D2A4A"/></svg>
+          <span>TH</span>
+        </button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">
+          <svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#012169"/><path d="M0 0l24 16M24 0L0 16" stroke="#fff" stroke-width="3"/><path d="M0 0l24 16M24 0L0 16" stroke="#C8102E" stroke-width="1.4"/><path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="5"/><path d="M12 0v16M0 8h24" stroke="#C8102E" stroke-width="2.6"/></svg>
+          <span>EN</span>
+        </button>
+      </div>
+      <button type="button" class="menu-btn" aria-expanded="false" aria-controls="sheet" aria-label="Open menu">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </header>
+  <div class="scrim" id="scrim"></div>
+  <aside class="sheet" id="sheet" aria-hidden="true">
+    <div class="sheet-top">
+      <img src="images/logo/logocentral-original.png" alt="" />
+      <button type="button" class="menu-btn" id="sheet-close" aria-label="Close menu" onclick="document.querySelector('.menu-btn').click()"><i></i><i></i><i></i></button>
+    </div>
+    <nav>
+      <a href="#residences"><span class="en">Residences</span><span class="th">ที่พัก</span><small>02</small></a>
+      <a href="#plans"><span class="en">Plans</span><span class="th">แปลน</span><small>01</small></a>
+      <a href="#location"><span class="en">Location</span><span class="th">ที่ตั้ง</span><small>07</small></a>
+      <a href="#contact"><span class="en">Contact</span><span class="th">ติดต่อ</span><small>08</small></a>
+    </nav>
+    <div class="sheet-sub">
+      <a href="#rates"><span class="en">Rates &amp; conditions</span><span class="th">ราคาและเงื่อนไข</span></a>
+      <a href="#building"><span class="en">Building &amp; facilities</span><span class="th">อาคารและสิ่งอำนวยความสะดวก</span></a>
+      <a href="#services"><span class="en">Services</span><span class="th">บริการ</span></a>
+      <a href="#invest"><span class="en">Buy &amp; invest notes</span><span class="th">บันทึกซื้อและลงทุน</span></a>
+    </div>
+    <div class="sheet-cta">
+      <a class="btn btn-brand" href="#contact"><span class="en">Write to the desk</span><span class="th">เขียนถึงแผนกต้อนรับ</span></a>
+      <a class="btn btn-ghost" href="tel:+6638414400">+66 38 414 400</a>
+    </div>
+  </aside>
+  <div id="theme-live" class="sr" aria-live="polite"></div>
+
+  <main id="top">
+    <div class="wrap hero">
+      <figure class="hero-frame">
+        <img class="hero-photo" src="images/home/entrance.jpg" alt="MAXXCENTRAL entrance at night, 3rd Road Soi 14, Pattaya" />
+        <div class="hero-copy">
+          <div class="hero-card">
+            <div class="eyebrow"><span class="en">Plate 00 · Entrance · Pattaya City</span><span class="th">แผ่น 00 · ทางเข้า · พัทยา</span></div>
+            <h1><span class="en">Furnished residences<br />in central Pattaya.</span><span class="th">ที่พักพร้อมเฟอร์นิเจอร์<br />ใจกลางพัทยา</span></h1>
+            <p class="en">Luxury Thai-contemporary studios and one-bedroom suites with hotel service. A seven-storey condotel on 3rd Road Soi 14, near Soi Buakhao.</p>
+            <p class="th">สตูดิโอและสวีทหนึ่งห้องนอนสไตล์ไทยร่วมสมัย พร้อมบริการระดับโรงแรม คอนโดเทลเจ็ดชั้น ซอย 14 ถนนสายสาม ใกล้ซอยบัวขาว</p>
+          </div>
+        </div>
+        <div class="spec-strip" aria-label="Published figures">
+          <div class="spec-chip"><b>47</b><span class="en">Residences</span><span class="th">ยูนิต</span></div>
+          <div class="spec-chip"><b>7</b><span class="en">Storeys</span><span class="th">ชั้น</span></div>
+          <div class="spec-chip"><b>36–78 m²</b><span class="en">Published sizes</span><span class="th">ขนาดห้อง</span></div>
+          <div class="spec-chip"><b>฿12,900</b><span class="en">Studio · 3+ months</span><span class="th">สตูดิโอ · พักยาว</span></div>
+          <div class="spec-chip"><b>4</b><span class="en">Layouts</span><span class="th">ผังห้อง</span></div>
+        </div>
+      </figure>
+      <nav class="contents" aria-label="Contents">
+        <a href="#plans"><b class="en">Plans</b><b class="th">แปลน</b><span>01</span></a>
+        <a href="#residences"><b class="en">Residences</b><b class="th">ที่พัก</b><span>02</span></a>
+        <a href="#rates"><b class="en">Rates</b><b class="th">ราคา</b><span>03</span></a>
+        <a href="#building"><b class="en">Building</b><b class="th">อาคาร</b><span>04</span></a>
+        <a href="#services"><b class="en">Services</b><b class="th">บริการ</b><span>05</span></a>
+        <a href="#invest"><b class="en">Invest</b><b class="th">ลงทุน</b><span>06</span></a>
+        <a href="#location"><b class="en">Location</b><b class="th">ที่ตั้ง</b><span>07</span></a>
+        <a href="#contact"><b class="en">Contact</b><b class="th">ติดต่อ</b><span>08</span></a>
+      </nav>
+    </div>
+
+    <section class="section" id="plans">
+      <div class="wrap">
+        <div class="kicker"><span>01</span><em class="en">Floor-plan reader</em><em class="th">เครื่องอ่านแปลน</em></div>
+        <h2><span class="en">Four layouts on each wing.</span><span class="th">สี่ผังในแต่ละปีกอาคาร</span></h2>
+        <p class="lede en">Each floor has a left and a right corridor wing. Each wing holds two studios and two one-bedroom suites — four apartments — so the floor stays quiet. The drawing below is the published floor plate. Choose a type to open that unit plan.</p>
+        <p class="lede th">แต่ละชั้นมีทางเดินปีกซ้ายและปีกขวา แต่ละปีกมีสตูดิโอสองห้องและสวีทหนึ่งห้องนอนสองห้อง รวมสี่ห้อง เพื่อความเป็นส่วนตัว ภาพด้านล่างคือแปลนชั้นที่เผยแพร่ เลือกประเภทเพื่อเปิดแปลนห้องนั้น</p>
+        <div class="reader">
+          <div class="plan-frame" id="plan-frame">
+            <img id="plan-img" src="images/plans/floorplan.png" alt="MAXXCENTRAL floor plan with types A, B, C and D" />
+            <div class="plan-cap" id="plan-cap">
+              <span class="en">Back · pool · east</span><span class="th">ด้านหลัง · สระ · ตะวันออก</span>
+              <span class="en">Front · west</span><span class="th">ด้านหน้า · ตะวันตก</span>
+            </div>
+          </div>
+          <aside class="facts">
+            <div class="type-switch" role="group" aria-label="Plan">
+              <button type="button" data-plan="plate" aria-pressed="true">PLATE</button>
+              <button type="button" data-plan="c" aria-pressed="false">TYPE C</button>
+              <button type="button" data-plan="d" aria-pressed="false">TYPE D</button>
+              <button type="button" data-plan="b" aria-pressed="false">TYPE B</button>
+              <button type="button" data-plan="a" aria-pressed="false">TYPE A</button>
+              <button type="button" data-plan="vip" aria-pressed="false">406 VIP</button>
+            </div>
+
+            <div class="panel" data-panel="plate">
+              <h3><span class="en">Typical floor</span><span class="th">แปลนชั้นทั่วไป</span></h3>
+              <p class="meta"><span class="en">Published plate · not a unit for sale by number</span><span class="th">แปลนที่เผยแพร่ · ไม่ใช่รายการห้องขายตามเลข</span></p>
+              <ul class="legend">
+                <li><span class="en">Type A — 1-bedroom suite deluxe · 78 m² · front</span><span class="th">ประเภท A — สวีทหนึ่งห้องนอนดีลักซ์ · 78 ตร.ม. · ด้านหน้า</span></li>
+                <li><span class="en">Type B — 1-bedroom suite · 78 m² · pool side</span><span class="th">ประเภท B — สวีทหนึ่งห้องนอน · 78 ตร.ม. · ด้านสระ</span></li>
+                <li><span class="en">Type C — Studio · 36 m²</span><span class="th">ประเภท C — สตูดิโอ · 36 ตร.ม.</span></li>
+                <li><span class="en">Type D — Studio deluxe · 39 m² · above the entrance</span><span class="th">ประเภท D — สตูดิโอดีลักซ์ · 39 ตร.ม. · เหนือทางเข้า</span></li>
+              </ul>
+              <p class="fine en" style="margin-top:.7rem">The site says you can choose from four room layouts. Suite 406 VIP is a furnished version of the deluxe suite, not a fifth plan.</p>
+              <p class="fine th" style="margin-top:.7rem">เว็บไซต์ระบุว่าเลือกได้สี่ผังห้อง สวีท 406 วีไอพีเป็นการตกแต่งของสวีทดีลักซ์ ไม่ใช่แปลนที่ห้า</p>
+            </div>
+
+            <div class="panel" data-panel="c" hidden>
+              <h3><span class="en">Studio apartment</span><span class="th">สตูดิโอ</span></h3>
+              <p class="meta">Type C · 36 m²</p>
+              <p class="en">North toward Big C Extra, or south. Hotel-style furniture, king-size bed in the description (the feature list also says double size), air-conditioning, ceiling fan, flat-screen TV, rain shower. Kitchenette with hob, microwave and a large fridge, balcony, desk, telephone, free ultra-high-speed internet, in-room digital safe, cable TV with 100 channels.</p>
+              <p class="th">หันเหนือไปทางบิ๊กซีเอ็กซ์ตร้า หรือหันใต้ เฟอร์นิเจอร์สไตล์โรงแรม คำอธิบายระบุเตียงคิงไซซ์ (รายการคุณสมบัติเขียนว่าเตียงดับเบิล) เครื่องปรับอากาศ พัดลมเพดาน ทีวีจอแบน ฝักบัวเรนชาวเวอร์ ครัวขนาดเล็กพร้อมเตา ไมโครเวฟ และตู้เย็นใหญ่ ระเบียง โต๊ะทำงาน โทรศัพท์ อินเทอร์เน็ตความเร็วสูงฟรี ตู้เซฟดิจิทัลในห้อง เคเบิลทีวี 100 ช่อง</p>
+              <ul class="feat"><li>36 m²</li><li class="en">Kitchenette</li><li class="th">ครัวเล็ก</li><li class="en">Balcony</li><li class="th">ระเบียง</li><li class="en">Desk</li><li class="th">โต๊ะทำงาน</li><li class="en">Safe</li><li class="th">ตู้เซฟ</li></ul>
+              <div class="price-row"><div><span class="en">1–2 months</span><span class="th">1–2 เดือน</span><b>฿14,500</b></div><div><span class="en">3+ months</span><span class="th">3 เดือนขึ้นไป</span><b>฿12,900</b></div></div>
+            </div>
+
+            <div class="panel" data-panel="d" hidden>
+              <h3><span class="en">Studio deluxe</span><span class="th">สตูดิโอดีลักซ์</span></h3>
+              <p class="meta">Type D · 39 m²</p>
+              <p class="en">Above the main entrance, facing west toward Third Road and Central Festival Beach. A long plan with extra entrance space. Same studio kit: king-size bed, air-conditioning, ceiling fan, built-in wardrobe, kitchenette with large fridge, hob and microwave, desk, phone, free high-speed internet, safe, balcony, rain shower.</p>
+              <p class="th">อยู่เหนือทางเข้าหลัก หันตะวันตกสู่ถนนสายสามและเซ็นทรัลเฟสติวัลบีช ผังยาวมีพื้นที่ทางเข้าเพิ่ม อุปกรณ์เดียวกับสตูดิโอ เตียงคิงไซซ์ เครื่องปรับอากาศ พัดลมเพดาน ตู้เสื้อผ้าบิลท์อิน ครัวเล็กพร้อมตู้เย็นใหญ่ เตาและไมโครเวฟ โต๊ะทำงาน โทรศัพท์ อินเทอร์เน็ตความเร็วสูงฟรี ตู้เซฟ ระเบียง ฝักบัวเรนชาวเวอร์</p>
+              <ul class="feat"><li>39 m²</li><li class="en">West front</li><li class="th">ด้านหน้าทิศตะวันตก</li><li class="en">Wardrobe</li><li class="th">ตู้เสื้อผ้า</li><li class="en">Kitchenette</li><li class="th">ครัวเล็ก</li></ul>
+              <div class="price-row"><div><span class="en">1–2 months</span><span class="th">1–2 เดือน</span><b>฿14,900</b></div><div><span class="en">3+ months</span><span class="th">3 เดือนขึ้นไป</span><b>฿13,500</b></div></div>
+            </div>
+
+            <div class="panel" data-panel="b" hidden>
+              <h3><span class="en">1-bedroom suite</span><span class="th">สวีทหนึ่งห้องนอน</span></h3>
+              <p class="meta">Type B · 78 m²</p>
+              <p class="en">Separate air-conditioned living room and bedroom, each with a flat-screen TV. Corner balcony on the back, north-east over the pool or east-west, reached from living room or bedroom. Generous entry, kitchen with two-door fridge and four-burner ceramic hob, dining and kitchen bar, desk with high-speed internet, sofa and armchair, king-size bed, built-in wardrobe, bathroom with rain shower. Telephone, in-room safe, two 32–50 inch TVs, 100+ international channels. Internet free.</p>
+              <p class="th">ห้องนั่งเล่นและห้องนอนแยกกัน ทั้งคู่มีเครื่องปรับอากาศและทีวีจอแบน ระเบียงมุมด้านหลัง ทิศตะวันออกเฉียงเหนือเหนือสระ หรือตะวันออก-ตะวันตก เข้าได้จากห้องนั่งเล่นหรือห้องนอน โถงทางเข้ากว้าง ครัวพร้อมตู้เย็นสองประตูและเตาเซรามิกสี่หัว โซนทานอาหารและบาร์ครัว โต๊ะทำงานพร้อมอินเทอร์เน็ตความเร็วสูง โซฟาและเก้าอี้เท้าแขน เตียงคิงไซซ์ ตู้เสื้อผ้าบิลท์อิน ห้องน้ำฝักบัวเรนชาวเวอร์ โทรศัพท์ ตู้เซฟ ทีวี 32–50 นิ้วสองเครื่อง ช่องต่างประเทศกว่า 100 ช่อง อินเทอร์เน็ตฟรี</p>
+              <ul class="feat"><li>78 m²</li><li class="en">Two TVs</li><li class="th">ทีวีสองเครื่อง</li><li class="en">Corner balcony</li><li class="th">ระเบียงมุม</li><li class="en">Full kitchen</li><li class="th">ครัวเต็มรูปแบบ</li></ul>
+              <div class="price-row"><div><span class="en">1–2 months</span><span class="th">1–2 เดือน</span><b>฿24,900</b></div><div><span class="en">3+ months</span><span class="th">3 เดือนขึ้นไป</span><b>฿20,900</b></div></div>
+            </div>
+
+            <div class="panel" data-panel="a" hidden>
+              <h3><span class="en">1-bedroom suite deluxe</span><span class="th">สวีทหนึ่งห้องนอนดีลักซ์</span></h3>
+              <p class="meta">Type A · 78 m²</p>
+              <p class="en">Front of the building. Corner balconies to the north-west or south-west, from bedroom or living room. Private entry with a separate guest toilet. Bedroom with king-size bed, corner wardrobe, en-suite rain shower. Fully air-conditioned, plus three ceiling fans. Open kitchen with breakfast bar, two-door fridge-freezer, four-burner hob, microwave, separate dining. Desk, telephone, safe, two 32–50 inch TVs, 100+ channels. Internet free.</p>
+              <p class="th">ด้านหน้าอาคาร ระเบียงมุมทิศตะวันตกเฉียงเหนือหรือตะวันตกเฉียงใต้ เข้าจากห้องนอนหรือห้องนั่งเล่น ทางเข้าส่วนตัวพร้อมห้องน้ำแขกแยก ห้องนอนเตียงคิงไซซ์ ตู้เสื้อผ้ามุม ห้องน้ำในตัวฝักบัวเรนชาวเวอร์ เครื่องปรับอากาศทั้งห้อง และพัดลมเพดานอีกสามตัว ครัวเปิดพร้อมบาร์อาหารเช้า ตู้เย็น-ช่องแข็งสองประตู เตาสี่หัว ไมโครเวฟ มุมทานอาหารแยก โต๊ะทำงาน โทรศัพท์ ตู้เซฟ ทีวี 32–50 นิ้วสองเครื่อง กว่า 100 ช่อง อินเทอร์เน็ตฟรี</p>
+              <ul class="feat"><li>78 m²</li><li class="en">Guest toilet</li><li class="th">ห้องน้ำแขก</li><li class="en">3 ceiling fans</li><li class="th">พัดลมเพดาน 3 ตัว</li><li class="en">Front corner</li><li class="th">มุมด้านหน้า</li></ul>
+              <div class="price-row"><div><span class="en">1–2 months</span><span class="th">1–2 เดือน</span><b>฿25,500</b></div><div><span class="en">3+ months</span><span class="th">3 เดือนขึ้นไป</span><b>฿22,500</b></div></div>
+            </div>
+
+            <div class="panel" data-panel="vip" hidden>
+              <h3><span class="en">Suite deluxe VIP 406</span><span class="th">สวีทดีลักซ์ วีไอพี 406</span></h3>
+              <p class="meta">78 m² · <span class="en">same published plan drawing as Type A</span><span class="th">ใช้ภาพแปลนเดียวกับประเภท A ตามที่เว็บเผยแพร่</span></p>
+              <p class="en">Unit 406 is described with classic white furniture, selected oriental artwork, and marble floors including the north-west balcony. Walk-through bathroom with bathtub and rain shower. Three flat screens, 43–55 inches, in dining, living and bedroom, each with sound system and DVD player. Upgraded kitchen counter with bar chairs and a three-door fridge with freezer. Separate dining, work station, telephone, in-room safe.</p>
+              <p class="th">ห้อง 406 ระบุเฟอร์นิเจอร์ขาวคลาสสิก งานศิลป์ตะวันออกที่คัดมา และพื้นหินอ่อนรวมระเบียงทิศตะวันตกเฉียงเหนือ ห้องน้ำทางเดินผ่านพร้อมอ่างอาบน้ำและฝักบัวเรนชาวเวอร์ ทีวีจอแบนสามเครื่องขนาด 43–55 นิ้ว ในโซนทานอาหาร นั่งเล่น และห้องนอน พร้อมเครื่องเสียงและเครื่องเล่นดีวีดี ครัวอัปเกรดมีเคาน์เตอร์ เก้าอี้บาร์ และตู้เย็นสามประตูพร้อมช่องแข็ง มุมทานอาหารแยก มุมทำงาน โทรศัพท์ และตู้เซฟในห้อง</p>
+              <ul class="feat"><li>406</li><li>78 m²</li><li class="en">Bathtub</li><li class="th">อ่างอาบน้ำ</li><li class="en">3 TVs</li><li class="th">ทีวีสามเครื่อง</li><li class="en">Marble floors</li><li class="th">พื้นหินอ่อน</li></ul>
+              <div class="price-row"><div><span class="en">1–2 months</span><span class="th">1–2 เดือน</span><b>฿32,000</b></div><div><span class="en">3+ months</span><span class="th">3 เดือนขึ้นไป</span><b>฿29,900</b></div></div>
+            </div>
+          </aside>
+        </div>
+        <p class="fine en" style="margin-top:.8rem">Pictures and floor plans are for illustration only, as the site states. This reader does not show which units are free.</p>
+        <p class="fine th" style="margin-top:.8rem">ภาพและแปลนใช้ประกอบตามที่เว็บไซต์ระบุ เครื่องอ่านนี้ไม่แสดงว่าห้องใดว่าง</p>
+      </div>
+    </section>
+
+    <section class="section" id="residences">
+      <div class="wrap">
+        <div class="kicker"><span>02</span><em class="en">Photo index</em><em class="th">ดัชนีภาพ</em></div>
+        <h2><span class="en">The units, as photographed.</span><span class="th">ห้องตามภาพที่เผยแพร่</span></h2>
+        <p class="lede en">Every residence photo on the live rooms page, plus the three homepage unit plates. Plan drawings stay in the reader above, not in this index. No availability is stated.</p>
+        <p class="lede th">ภาพที่พักทุกภาพจากหน้าห้องของเว็บไซต์จริง รวมสามภาพยูนิตจากหน้าแรก ภาพแปลนอยู่ในเครื่องอ่านด้านบน ไม่ได้อยู่ในดัชนีนี้ ไม่มีการระบุว่าห้องว่าง</p>
+
+        <article class="index-block" id="unit-studio">
+          <div class="index-head">
+            <h3><span class="en">Type C · Studio · 36 m²</span><span class="th">ประเภท C · สตูดิโอ · 36 ตร.ม.</span></h3>
+            <p><a href="#plans" data-open-plan="c"><span class="en">Open this plan</span><span class="th">เปิดแปลนนี้</span></a></p>
+          </div>
+          <div class="shots"><button type="button" data-shot data-caption="Homepage studio" data-caption-th="ภาพสตูดิโอจากหน้าแรก"><img src="images/home/studio.jpg" alt="MAXXCENTRAL Studio" /></button><button type="button" data-shot data-caption="Studio · photo 1 of 5" data-caption-th="สตูดิโอ · ภาพ 1 จาก 5"><img src="images/gallery/studio-1.jpg" alt="MAXXCENTRAL Studio interior 1" /></button><button type="button" data-shot data-caption="Studio · photo 2 of 5" data-caption-th="สตูดิโอ · ภาพ 2 จาก 5"><img src="images/gallery/studio-2.jpg" alt="MAXXCENTRAL Studio interior 2" /></button><button type="button" data-shot data-caption="Studio · photo 3 of 5" data-caption-th="สตูดิโอ · ภาพ 3 จาก 5"><img src="images/gallery/studio-3.jpg" alt="MAXXCENTRAL Studio interior 3" /></button><button type="button" data-shot data-caption="Studio · photo 4 of 5" data-caption-th="สตูดิโอ · ภาพ 4 จาก 5"><img src="images/gallery/studio-4.jpg" alt="MAXXCENTRAL Studio interior 4" /></button><button type="button" data-shot data-caption="Studio · photo 5 of 5" data-caption-th="สตูดิโอ · ภาพ 5 จาก 5"><img src="images/gallery/studio-5.jpg" alt="MAXXCENTRAL Studio interior 5" /></button></div>
+        </article>
+
+        <article class="index-block" id="unit-studio_deluxe">
+          <div class="index-head">
+            <h3><span class="en">Type D · Studio deluxe · 39 m²</span><span class="th">ประเภท D · สตูดิโอดีลักซ์ · 39 ตร.ม.</span></h3>
+            <p><a href="#plans" data-open-plan="d"><span class="en">Open this plan</span><span class="th">เปิดแปลนนี้</span></a></p>
+          </div>
+          <div class="shots"><button type="button" data-shot data-caption="Homepage studio deluxe" data-caption-th="ภาพสตูดิโอดีลักซ์จากหน้าแรก"><img src="images/home/studio_deluxe.jpg" alt="MAXXCENTRAL Studio deluxe" /></button><button type="button" data-shot data-caption="Studio deluxe · photo 1 of 5" data-caption-th="สตูดิโอดีลักซ์ · ภาพ 1 จาก 5"><img src="images/gallery/studio_deluxe-1.jpg" alt="MAXXCENTRAL Studio deluxe interior 1" /></button><button type="button" data-shot data-caption="Studio deluxe · photo 2 of 5" data-caption-th="สตูดิโอดีลักซ์ · ภาพ 2 จาก 5"><img src="images/gallery/studio_deluxe-2.jpg" alt="MAXXCENTRAL Studio deluxe interior 2" /></button><button type="button" data-shot data-caption="Studio deluxe · photo 3 of 5" data-caption-th="สตูดิโอดีลักซ์ · ภาพ 3 จาก 5"><img src="images/gallery/studio_deluxe-3.jpg" alt="MAXXCENTRAL Studio deluxe interior 3" /></button><button type="button" data-shot data-caption="Studio deluxe · photo 4 of 5" data-caption-th="สตูดิโอดีลักซ์ · ภาพ 4 จาก 5"><img src="images/gallery/studio_deluxe-4.jpg" alt="MAXXCENTRAL Studio deluxe interior 4" /></button><button type="button" data-shot data-caption="Studio deluxe · photo 5 of 5" data-caption-th="สตูดิโอดีลักซ์ · ภาพ 5 จาก 5"><img src="images/gallery/studio_deluxe-5.jpg" alt="MAXXCENTRAL Studio deluxe interior 5" /></button></div>
+        </article>
+
+        <article class="index-block" id="unit-suite">
+          <div class="index-head">
+            <h3><span class="en">Type B · 1-bedroom suite · 78 m²</span><span class="th">ประเภท B · สวีทหนึ่งห้องนอน · 78 ตร.ม.</span></h3>
+            <p><a href="#plans" data-open-plan="b"><span class="en">Open this plan</span><span class="th">เปิดแปลนนี้</span></a></p>
+          </div>
+          <div class="shots"><button type="button" data-shot data-caption="Homepage one-bedroom suite" data-caption-th="ภาพสวีทหนึ่งห้องนอนจากหน้าแรก"><img src="images/home/one_bed_room.jpg" alt="MAXXCENTRAL 1-bedroom suite" /></button><button type="button" data-shot data-caption="1-bedroom suite · photo 1 of 5" data-caption-th="สวีทหนึ่งห้องนอน · ภาพ 1 จาก 5"><img src="images/gallery/suite-1.jpg" alt="MAXXCENTRAL 1-bedroom suite interior 1" /></button><button type="button" data-shot data-caption="1-bedroom suite · photo 2 of 5" data-caption-th="สวีทหนึ่งห้องนอน · ภาพ 2 จาก 5"><img src="images/gallery/suite-2.jpg" alt="MAXXCENTRAL 1-bedroom suite interior 2" /></button><button type="button" data-shot data-caption="1-bedroom suite · photo 3 of 5" data-caption-th="สวีทหนึ่งห้องนอน · ภาพ 3 จาก 5"><img src="images/gallery/suite-3.jpg" alt="MAXXCENTRAL 1-bedroom suite interior 3" /></button><button type="button" data-shot data-caption="1-bedroom suite · photo 4 of 5" data-caption-th="สวีทหนึ่งห้องนอน · ภาพ 4 จาก 5"><img src="images/gallery/suite-4.jpg" alt="MAXXCENTRAL 1-bedroom suite interior 4" /></button><button type="button" data-shot data-caption="1-bedroom suite · photo 5 of 5" data-caption-th="สวีทหนึ่งห้องนอน · ภาพ 5 จาก 5"><img src="images/gallery/suite-5.jpg" alt="MAXXCENTRAL 1-bedroom suite interior 5" /></button></div>
+        </article>
+
+        <article class="index-block" id="unit-suite_deluxe">
+          <div class="index-head">
+            <h3><span class="en">Type A · Suite deluxe · 78 m²</span><span class="th">ประเภท A · สวีทดีลักซ์ · 78 ตร.ม.</span></h3>
+            <p><a href="#plans" data-open-plan="a"><span class="en">Open this plan</span><span class="th">เปิดแปลนนี้</span></a></p>
+          </div>
+          <div class="shots"><button type="button" data-shot data-caption="Suite deluxe · photo 1 of 5" data-caption-th="สวีทดีลักซ์ · ภาพ 1 จาก 5"><img src="images/gallery/suite_deluxe-1.jpg" alt="MAXXCENTRAL Suite deluxe interior 1" /></button><button type="button" data-shot data-caption="Suite deluxe · photo 2 of 5" data-caption-th="สวีทดีลักซ์ · ภาพ 2 จาก 5"><img src="images/gallery/suite_deluxe-2.jpg" alt="MAXXCENTRAL Suite deluxe interior 2" /></button><button type="button" data-shot data-caption="Suite deluxe · photo 3 of 5" data-caption-th="สวีทดีลักซ์ · ภาพ 3 จาก 5"><img src="images/gallery/suite_deluxe-3.jpg" alt="MAXXCENTRAL Suite deluxe interior 3" /></button><button type="button" data-shot data-caption="Suite deluxe · photo 4 of 5" data-caption-th="สวีทดีลักซ์ · ภาพ 4 จาก 5"><img src="images/gallery/suite_deluxe-4.jpg" alt="MAXXCENTRAL Suite deluxe interior 4" /></button><button type="button" data-shot data-caption="Suite deluxe · photo 5 of 5" data-caption-th="สวีทดีลักซ์ · ภาพ 5 จาก 5"><img src="images/gallery/suite_deluxe-5.jpg" alt="MAXXCENTRAL Suite deluxe interior 5" /></button></div>
+        </article>
+
+        <article class="index-block" id="unit-vip">
+          <div class="index-head">
+            <h3><span class="en">Suite deluxe VIP 406 · 78 m²</span><span class="th">สวีทดีลักซ์ วีไอพี 406 · 78 ตร.ม.</span></h3>
+            <p><a href="#plans" data-open-plan="vip"><span class="en">Open this plan</span><span class="th">เปิดแปลนนี้</span></a></p>
+          </div>
+          <div class="shots"><button type="button" data-shot data-caption="VIP 406 · photo 1 of 5" data-caption-th="วีไอพี 406 · ภาพ 1 จาก 5"><img src="images/gallery/vip-1.jpg" alt="MAXXCENTRAL VIP 406 interior 1" /></button><button type="button" data-shot data-caption="VIP 406 · photo 2 of 5" data-caption-th="วีไอพี 406 · ภาพ 2 จาก 5"><img src="images/gallery/vip-2.jpg" alt="MAXXCENTRAL VIP 406 interior 2" /></button><button type="button" data-shot data-caption="VIP 406 · photo 3 of 5" data-caption-th="วีไอพี 406 · ภาพ 3 จาก 5"><img src="images/gallery/vip-3.jpg" alt="MAXXCENTRAL VIP 406 interior 3" /></button><button type="button" data-shot data-caption="VIP 406 · photo 4 of 5" data-caption-th="วีไอพี 406 · ภาพ 4 จาก 5"><img src="images/gallery/vip-4.jpg" alt="MAXXCENTRAL VIP 406 interior 4" /></button><button type="button" data-shot data-caption="VIP 406 · photo 5 of 5" data-caption-th="วีไอพี 406 · ภาพ 5 จาก 5"><img src="images/gallery/vip-5.jpg" alt="MAXXCENTRAL VIP 406 interior 5" /></button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="rates">
+      <div class="wrap">
+        <div class="kicker"><span>03</span><em class="en">Published monthly rates</em><em class="th">ค่ารายเดือนที่เผยแพร่</em></div>
+        <h2><span class="en">Rates in baht, paid in advance.</span><span class="th">ราคาเป็นบาท จ่ายล่วงหน้า</span></h2>
+        <p class="lede en">Monthly figure with an asterisk on the site is the rate when booking three months or more. The site says rates can change. Weekly room prices are not published — only the weekly deposit is.</p>
+        <p class="lede th">ตัวเลขรายเดือนที่มีดอกจันบนเว็บไซต์คือราคาเมื่อจองตั้งแต่สามเดือนขึ้นไป เว็บไซต์ระบุว่าอัตราอาจเปลี่ยน ราคาเช่ารายสัปดาห์ไม่ได้เผยแพร่ มีเพียงเงินมัดจำรายสัปดาห์</p>
+        <div class="rate">
+          <article class="rate-row"><div><b class="en">Studio · 36 m²</b><b class="th">สตูดิโอ · 36 ตร.ม.</b><div class="muted en">Type C</div><div class="muted th">ประเภท C</div></div><div class="nums"><div>1–2 mo · ฿14,500</div><div>3+ · ฿12,900</div></div></article>
+          <article class="rate-row"><div><b class="en">Studio deluxe · 39 m²</b><b class="th">สตูดิโอดีลักซ์ · 39 ตร.ม.</b><div class="muted en">Type D</div><div class="muted th">ประเภท D</div></div><div class="nums"><div>1–2 mo · ฿14,900</div><div>3+ · ฿13,500</div></div></article>
+          <article class="rate-row"><div><b class="en">1-bedroom suite · 78 m²</b><b class="th">สวีทหนึ่งห้องนอน · 78 ตร.ม.</b><div class="muted en">Type B</div><div class="muted th">ประเภท B</div></div><div class="nums"><div>1–2 mo · ฿24,900</div><div>3+ · ฿20,900</div></div></article>
+          <article class="rate-row"><div><b class="en">Suite deluxe · 78 m²</b><b class="th">สวีทดีลักซ์ · 78 ตร.ม.</b><div class="muted en">Type A</div><div class="muted th">ประเภท A</div></div><div class="nums"><div>1–2 mo · ฿25,500</div><div>3+ · ฿22,500</div></div></article>
+          <article class="rate-row"><div><b class="en">Suite deluxe VIP 406 · 78 m²</b><b class="th">สวีทดีลักซ์ วีไอพี 406 · 78 ตร.ม.</b></div><div class="nums"><div>1–2 mo · ฿32,000</div><div>3+ · ฿29,900</div></div></article>
+        </div>
+        <div class="cols cols-3 stack">
+          <article class="glass-card">
+            <h3><span class="en">Payment</span><span class="th">การชำระเงิน</span></h3>
+            <ul class="clean">
+              <li class="en">Room rates payable in THB in advance at check-in. Maximum payable in advance: 1 month.</li>
+              <li class="th">ค่าห้องชำระเป็นบาทล่วงหน้าตอนเช็คอิน จ่ายล่วงหน้าได้สูงสุดหนึ่งเดือน</li>
+              <li class="en">Deposit payable in THB, or the equivalent in any foreign currency, at check-in.</li>
+              <li class="th">เงินมัดจำชำระเป็นบาท หรือสกุลอื่นในจำนวนเท่ากัน ตอนเช็คอิน</li>
+              <li class="en">Credit cards: 3% surcharge.</li>
+              <li class="th">บัตรเครดิตคิดเพิ่ม 3%</li>
+            </ul>
+          </article>
+          <article class="glass-card">
+            <h3><span class="en">Cleaning</span><span class="th">ทำความสะอาด</span></h3>
+            <ul class="clean">
+              <li class="en">Includes bed linens and bath towels.</li>
+              <li class="th">รวมผ้าปูที่นอนและผ้าเช็ดตัว</li>
+              <li class="en">Daily: ฿3,800 per month.</li>
+              <li class="th">รายวัน: 3,800 บาทต่อเดือน</li>
+              <li class="en">Twice a week: ฿1,850 per month.</li>
+              <li class="th">สัปดาห์ละสองครั้ง: 1,850 บาทต่อเดือน</li>
+              <li class="en">Once a week: ฿1,200 per month.</li>
+              <li class="th">สัปดาห์ละครั้ง: 1,200 บาทต่อเดือน</li>
+            </ul>
+          </article>
+          <article class="glass-card">
+            <h3><span class="en">Utilities &amp; deposits</span><span class="th">ค่าน้ำไฟและมัดจำ</span></h3>
+            <ul class="clean">
+              <li class="en">Water: 50 baht per unit. Electricity: 9 baht per unit.</li>
+              <li class="th">ค่าน้ำ 50 บาทต่อหน่วย ค่าไฟ 9 บาทต่อหน่วย</li>
+              <li class="en">In-room LAN or Wi-Fi is free.</li>
+              <li class="th">อินเทอร์เน็ตในห้องทั้งสายแลนและไวไฟฟรี</li>
+              <li class="en">Weekly rent deposit ฿7,500. Monthly deposit ฿10,000. Long stay of 3+ months: deposit equals one month’s rate.</li>
+              <li class="th">มัดจำรายสัปดาห์ 7,500 บาท รายเดือน 10,000 บาท พักยาว 3 เดือนขึ้นไป มัดจำเท่ากับค่าห้องหนึ่งเดือน</li>
+              <li class="en">Weekly, monthly and long-stay rates exclude water, electricity and cleaning.</li>
+              <li class="th">อัตรารายสัปดาห์ รายเดือน และพักยาว ไม่รวมค่าน้ำ ค่าไฟ และค่าทำความสะอาด</li>
+            </ul>
+          </article>
+        </div>
+        <p class="fine en" style="margin-top:.8rem">The live booking form offers Studio or 1-bedroom suite, in three steps, and says no credit card is required. This demo does not check their calendar.</p>
+        <p class="fine th" style="margin-top:.8rem">แบบจองบนเว็บจริงให้เลือกสตูดิโอหรือสวีทหนึ่งห้องนอน สามขั้นตอน และระบุว่าไม่ต้องใช้บัตรเครดิต เดโมนี้ไม่ตรวจปฏิทินของที่พัก</p>
+      </div>
+    </section>
+
+    <section class="section" id="building">
+      <div class="wrap">
+        <div class="kicker"><span>04</span><em class="en">Building</em><em class="th">อาคาร</em></div>
+        <h2><span class="en">A low-rise with a full desk.</span><span class="th">อาคารเตี้ยพร้อมแผนกต้อนรับ</span></h2>
+        <p class="lede en">MAXXCENTRAL offers 47 fully equipped, furnished studios and one-bedroom apartments for rent. European management. The published introduction says 24-hour reception and security. The facts list says the reception desk is open 8am to 8pm, with a security guard overnight from 8pm to 8am. Both lines are kept.</p>
+        <p class="lede th">แมกซ์เซ็นทรัลมีสตูดิโอและห้องหนึ่งห้องนอนตกแต่งพร้อมอุปกรณ์ 47 ห้องให้เช่า บริหารแบบยุโรป ข้อความเกริ่นระบุแผนกต้อนรับและความปลอดภัย 24 ชั่วโมง รายการข้อเท็จจริงระบุเคาน์เตอร์เปิด 8.00–20.00 น. และยามกลางคืน 20.00–8.00 น. เก็บทั้งสองข้อความไว้</p>
+        <div class="mosaic">
+          <figure><button type="button" data-shot data-caption="Lobby" data-caption-th="ล็อบบี้"><img src="images/facilities/1.jpg" alt="MAXXCENTRAL lobby" /></button><figcaption class="en">Lobby</figcaption><figcaption class="th">ล็อบบี้</figcaption></figure>
+          <figure><button type="button" data-shot data-caption="Lobby" data-caption-th="ล็อบบี้"><img src="images/facilities/2.jpg" alt="MAXXCENTRAL lobby seating" /></button><figcaption class="en">Lobby</figcaption><figcaption class="th">ล็อบบี้</figcaption></figure>
+          <figure><button type="button" data-shot data-caption="Lift" data-caption-th="ลิฟต์"><img src="images/facilities/3.jpg" alt="MAXXCENTRAL lift" /></button><figcaption class="en">Lift</figcaption><figcaption class="th">ลิฟต์</figcaption></figure>
+          <figure><button type="button" data-shot data-caption="Swimming pool" data-caption-th="สระว่ายน้ำ"><img src="images/facilities/4.jpg" alt="MAXXCENTRAL pool" /></button><figcaption class="en">Pool</figcaption><figcaption class="th">สระ</figcaption></figure>
+          <figure><button type="button" data-shot data-caption="Swimming pool" data-caption-th="สระว่ายน้ำ"><img src="images/facilities/5.jpg" alt="MAXXCENTRAL pool" /></button><figcaption class="en">Pool</figcaption><figcaption class="th">สระ</figcaption></figure>
+          <figure><button type="button" data-shot data-caption="Lobby, homepage" data-caption-th="ล็อบบี้จากหน้าแรก"><img src="images/home/lobby.jpg" alt="MAXXCENTRAL lobby from the homepage" /></button><figcaption class="en">Lobby · homepage</figcaption><figcaption class="th">ล็อบบี้ · หน้าแรก</figcaption></figure>
+          <figure><button type="button" data-shot data-caption="Swimming pool" data-caption-th="สระว่ายน้ำ"><img src="images/home/pool.jpg" alt="MAXXCENTRAL pool from the homepage" /></button><figcaption class="en">Pool · homepage</figcaption><figcaption class="th">สระ · หน้าแรก</figcaption></figure>
+          <figure><button type="button" data-shot data-caption="Fitness room" data-caption-th="ห้องฟิตเนส"><img src="images/facilities/6.jpg" alt="MAXXCENTRAL fitness room" /></button><figcaption class="en">Fitness</figcaption><figcaption class="th">ฟิตเนส</figcaption></figure>
+        </div>
+        <div class="cols cols-2 stack">
+          <article class="glass-card">
+            <h3><span class="en">In every residence</span><span class="th">ในทุกห้อง</span></h3>
+            <ul class="clean">
+              <li class="en">Balcony. Kitchen with large fridge, hob and microwave. One or two LED TVs, 32–50 inches, 100+ international channels.</li>
+              <li class="th">ระเบียง ครัวพร้อมตู้เย็นใหญ่ เตา และไมโครเวฟ ทีวีแอลอีดีหนึ่งหรือสองเครื่อง ขนาด 32–50 นิ้ว ช่องต่างประเทศกว่า 100 ช่อง</li>
+              <li class="en">Air-conditioning and ceiling fans. Ultra-high-speed internet, 100 Mbps. Telephone. Digital safe.</li>
+              <li class="th">เครื่องปรับอากาศและพัดลมเพดาน อินเทอร์เน็ตความเร็วสูงมาก 100 เมกะบิตต่อวินาที โทรศัพท์ ตู้เซฟดิจิทัล</li>
+              <li class="en">Individually designed and fully furnished. Work desk. Tea and coffee making. Safe deposit box. Room-to-room phone. Fire and smoke detectors. Rain shower in the bathrooms described.</li>
+              <li class="th">ออกแบบแยกแต่ละห้องและตกแต่งครบ โต๊ะทำงาน ชุดชงชาและกาแฟ ตู้เซฟ โทรศัพท์ระหว่างห้อง เครื่องตรวจจับไฟและควัน ห้องน้ำที่อธิบายไว้มีฝักบัวเรนชาวเวอร์</li>
+            </ul>
+          </article>
+          <article class="glass-card">
+            <h3><span class="en">Shared &amp; services</span><span class="th">ส่วนกลางและบริการ</span></h3>
+            <ul class="clean">
+              <li class="en">Lift to all floors. Outdoor pool with sun loungers. Cardio fitness. Rooftop relax area. MCLUB bar and lounge.</li>
+              <li class="th">ลิฟต์ทุกชั้น สระกลางแจ้งพร้อมเก้าอี้อาบแดด คาร์ดิโอฟิตเนส พื้นที่พักผ่อนบนดาดฟ้า เอ็มคลับบาร์และเลานจ์</li>
+              <li class="en">Free Wi-Fi in the lobby. Free in-room internet by Wi-Fi or LAN. Free use of the fitness area. The German page also lists the pool as free to use. Wake-up service.</li>
+              <li class="th">ไวไฟฟรีในล็อบบี้ อินเทอร์เน็ตในห้องฟรีทั้งไวไฟและสายแลน ใช้ฟิตเนสฟรี หน้าภาษาเยอรมันระบุว่าใช้สระได้ฟรีด้วย บริการปลุก</li>
+              <li class="en">Paid: cleaning daily or weekly, laundry, taxi, airport transfer, motorbike rental, car rental, fax, copy and print.</li>
+              <li class="th">มีค่าใช้จ่าย: ทำความสะอาดรายวันหรือรายสัปดาห์ ซักรีด แท็กซี่ รับส่งสนามบิน เช่ามอเตอร์ไซค์ เช่ารถ แฟกซ์ ถ่ายเอกสารและพิมพ์</li>
+              <li class="en">Credit cards accepted. Pets are not allowed. Maid service daily or twice a week. Personal advice for a short or long stay.</li>
+              <li class="th">รับบัตรเครดิต ไม่อนุญาตสัตว์เลี้ยง บริการแม่บ้านรายวันหรือสัปดาห์ละสองครั้ง ให้คำแนะนำสำหรับการพักสั้นหรือยาว</li>
+            </ul>
+          </article>
+          <article class="glass-card">
+            <h3><span class="en">Security &amp; parking</span><span class="th">ความปลอดภัยและที่จอดรถ</span></h3>
+            <ul class="clean">
+              <li class="en">24-hour security. Night guard 8pm–8am. CCTV on all floors. Entry by finger scan.</li>
+              <li class="th">รักษาความปลอดภัย 24 ชั่วโมง ยามกลางคืน 20.00–8.00 น. กล้องวงจรปิดทุกชั้น เข้าอาคารด้วยสแกนนิ้ว</li>
+              <li class="en">Free public parking in front of the building. Free private underground parking inside.</li>
+              <li class="th">ที่จอดรถสาธารณะฟรีหน้าอาคาร ที่จอดใต้ดินส่วนตัวฟรีในอาคาร</li>
+            </ul>
+          </article>
+          <article class="glass-card">
+            <h3><span class="en">Who publishes it</span><span class="th">ผู้เผยแพร่</span></h3>
+            <p class="en">The site says MAXX has specialised for more than 12 years in developing and renting serviced condos, with European management, and that it is trusted for maintenance, value and a stated occupancy of 90% a year. Copyright 2019 ROYALSUN Development Co. Ltd. “All changes reserved.” Those lines are the publisher’s, not a fresh survey.</p>
+            <p class="th">เว็บไซต์ระบุว่าแมกซ์ทำคอนโดบริการมากว่า 12 ปี ทั้งพัฒนาและให้เช่า บริหารแบบยุโรป และได้รับความไว้วางใจเรื่องการดูแลอาคาร มูลค่า และอัตราการเข้าพักที่ระบุ 90% ต่อปี ลิขสิทธิ์ 2019 บริษัท รอยัลซัน ดีเวลลอปเมนท์ จำกัด “สงวนการเปลี่ยนแปลง” ข้อความเหล่านี้เป็นของผู้เผยแพร่ ไม่ใช่การสำรวจใหม่</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="kicker"><span>05</span><em class="en">Services on the site</em><em class="th">บริการบนเว็บไซต์</em></div>
+        <h2><span class="en">Cars, bikes, and a desk that advises.</span><span class="th">รถ มอเตอร์ไซค์ และคำแนะนำจากเคาน์เตอร์</span></h2>
+        <div class="stack">
+          <article class="glass-card pair">
+            <div>
+              <h3><span class="en">Taxi</span><span class="th">แท็กซี่</span></h3>
+              <p class="en">Registered drivers, including airport pickup and a ride to Bangkok. Prices in baht, plus motorway fees of 105 baht each way.</p>
+              <p class="th">คนขับที่ขึ้นทะเบียน รวมรับที่สนามบินและไปกรุงเทพ ราคาเป็นบาท บวกค่าทางด่วน 105 บาทต่อเที่ยว</p>
+              <div class="table-wrap">
+                <table class="data">
+                  <thead><tr><th class="en">From</th><th class="th">จาก</th><th class="en">To</th><th class="th">ถึง</th><th class="en">Price</th><th class="th">ราคา</th></tr></thead>
+                  <tbody>
+                    <tr><td>BKK Suvarnabhumi</td><td>MAXXCENTRAL</td><td>฿1,500</td></tr>
+                    <tr><td>BKK Don Mueang</td><td>MAXXCENTRAL</td><td>฿1,800</td></tr>
+                    <tr><td>U-Tapao</td><td>MAXXCENTRAL</td><td>฿1,000</td></tr>
+                    <tr><td>MAXXCENTRAL</td><td>Suvarnabhumi</td><td>฿1,300</td></tr>
+                    <tr><td>MAXXCENTRAL</td><td>Don Mueang</td><td>฿1,800</td></tr>
+                    <tr><td>MAXXCENTRAL</td><td>U-Tapao</td><td>฿1,000</td></tr>
+                    <tr><td>MAXXCENTRAL</td><td class="en">Bangkok, Sukhumvit, Siam</td><td class="th">กรุงเทพ สุขุมวิท สยาม</td><td>฿1,750</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <button type="button" data-shot data-caption="Taxi service" data-caption-th="บริการแท็กซี่" style="padding:0;border:0;background:none;cursor:pointer"><img src="images/services/taxi.jpg" alt="Published taxi photograph" style="border-radius:14px;width:100%;object-fit:cover;max-height:240px" /></button>
+          </article>
+
+          <article class="glass-card">
+            <h3><span class="en">Motorbike rental</span><span class="th">เช่ามอเตอร์ไซค์</span></h3>
+            <p class="en">A motorbike taxi stops in front of the building, or rent one. Deposit 1,500 baht. Prices in baht.</p>
+            <p class="th">วินมอเตอร์ไซค์จอดหน้าอาคาร หรือเช่าเอง มัดจำ 1,500 บาท ราคาเป็นบาท</p>
+            <div class="table-wrap">
+              <table class="data">
+                <thead><tr><th class="en">Model</th><th class="th">รุ่น</th><th>1 <span class="en">day</span><span class="th">วัน</span></th><th>7</th><th>30</th><th>3+ <span class="en">mo</span><span class="th">เดือน</span></th></tr></thead>
+                <tbody>
+                  <tr><td>Yamaha Mio <span class="en">automatic</span><span class="th">ออโต้</span></td><td>฿200</td><td>฿1,000</td><td>฿3,000</td><td>฿2,500</td></tr>
+                  <tr><td>Honda PCX <span class="en">automatic</span><span class="th">ออโต้</span></td><td>฿300</td><td>฿1,500</td><td>฿4,500</td><td>฿3,500</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <button type="button" data-shot data-caption="Motorbike rental" data-caption-th="เช่ามอเตอร์ไซค์" style="margin-top:.7rem;padding:0;border:0;background:none;cursor:pointer"><img src="images/services/motorbike.jpg" alt="Published motorbike photograph" style="border-radius:12px;width:min(100%,360px)" /></button>
+          </article>
+
+          <article class="glass-card">
+            <h3><span class="en">Car rental</span><span class="th">เช่ารถ</span></h3>
+            <p class="en">First-class insurance included. Deposit 5,000 baht. The site names Hua Hin and Koh Chang as example trips.</p>
+            <p class="th">รวมประกันชั้นหนึ่ง มัดจำ 5,000 บาท เว็บไซต์ยกหัวหินและเกาะช้างเป็นตัวอย่างทริป</p>
+            <div class="table-wrap">
+              <table class="data">
+                <thead><tr><th class="en">Type</th><th class="th">ประเภท</th><th class="en">Model</th><th class="th">รุ่น</th><th>1 <span class="en">day</span><span class="th">วัน</span></th><th>7</th><th>30</th></tr></thead>
+                <tbody>
+                  <tr><td class="en">City limousine</td><td class="th">ลีมูซีนในเมือง</td><td>Toyota Yaris <span class="en">or</span><span class="th">หรือ</span> Vios, <span class="en">auto, new model</span><span class="th">ออโต้ รุ่นใหม่</span></td><td>฿1,500</td><td>฿8,500</td><td>฿28,500</td></tr>
+                  <tr><td class="en">Limousine</td><td class="th">ลีมูซีน</td><td>Toyota Camry 2.0e <span class="en">full option, leather, CD changer</span><span class="th">ฟูลออปชัน เบาะหนัง ซีดีเชนเจอร์</span></td><td>฿2,200</td><td>฿12,500</td><td>฿38,500</td></tr>
+                  <tr><td class="en">Pickup</td><td class="th">กระบะ</td><td>Toyota Hilux Vigo <span class="en">or</span><span class="th">หรือ</span> Nissan Frontier, <span class="en">manual</span><span class="th">เกียร์ธรรมดา</span></td><td>฿1,350</td><td>฿7,500</td><td>฿25,500</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <button type="button" data-shot data-caption="Car rental" data-caption-th="เช่ารถ" style="margin-top:.7rem;padding:0;border:0;background:none;cursor:pointer"><img src="images/services/car.jpg" alt="Published car photograph" style="border-radius:12px;width:min(100%,320px)" /></button>
+          </article>
+
+          <div class="cols cols-2">
+            <article class="glass-card">
+              <h3><span class="en">Sightseeing</span><span class="th">ท่องเที่ยว</span></h3>
+              <p class="en">The desk offers information on activities, attractions, package tours, island trips, and air tickets, with Malaysia, Singapore and Hong Kong named as examples. Places listed:</p>
+              <p class="th">เคาน์เตอร์ให้ข้อมูลกิจกรรม สถานที่ท่องเที่ยว ทัวร์แพ็กเกจ ทริปเกาะ และตั๋วเครื่องบิน โดยยกมาเลเซีย สิงคโปร์ และฮ่องกงเป็นตัวอย่าง สถานที่ที่ระบุ:</p>
+              <ul class="clean">
+                <li>Koh Larn</li><li>Koh Chang</li><li>Alcazar Show</li><li>Underwater World</li><li>Mini Siam</li><li>Nong Nooch Tropical Garden</li><li class="en">Fruit Farm Rayong</li><li class="th">สวนผลไม้ระยอง</li>
+              </ul>
+              <button type="button" data-shot data-caption="Sightseeing" data-caption-th="ท่องเที่ยว" style="margin-top:.7rem;padding:0;border:0;background:none;cursor:pointer"><img src="images/services/sightseeing.jpg" alt="Published sightseeing photograph" style="border-radius:12px;width:100%" /></button>
+            </article>
+            <article class="glass-card">
+              <h3><span class="en">Personal advice</span><span class="th">คำแนะนำส่วนตัว</span></h3>
+              <p class="en">The site invites questions about living, working or retiring in Thailand: visa, health insurance, taxes, moving, buying property, or starting a business. It says staff will share what they know and can recommend providers. Call +66 (0)8 4009 7009.</p>
+              <p class="th">เว็บไซต์เชิญให้ถามเรื่องอยู่ ทำงาน หรือเกษียณในไทย ทั้งวีซ่า ประกันสุขภาพ ภาษี การย้าย การซื้ออสังหาริมทรัพย์ หรือการเริ่มธุรกิจ ระบุว่าพนักงานจะแบ่งปันความรู้และแนะนำผู้ให้บริการได้ โทร +66 (0)8 4009 7009</p>
+              <button type="button" data-shot data-caption="Personal advice" data-caption-th="คำแนะนำส่วนตัว" style="margin-top:.7rem;padding:0;border:0;background:none;cursor:pointer"><img src="images/services/advise.jpg" alt="Published advice photograph" style="border-radius:12px;width:100%" /></button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="invest">
+      <div class="wrap">
+        <div class="kicker"><span>06</span><em class="en">As published · not an offer from this demo</em><em class="th">ตามที่เผยแพร่ · ไม่ใช่ข้อเสนอจากเดโมนี้</em></div>
+        <h2><span class="en">Buy and invest notes.</span><span class="th">บันทึกการซื้อและลงทุน</span></h2>
+        <p class="lede en">The live site sells studios and one-bedroom suites as furnished and ready to move in, and describes four programmes. Figures below are copied from those pages. Several are marked “not binding, changes reserved.” This page does not know which units are for sale.</p>
+        <p class="lede th">เว็บไซต์จริงขายสตูดิโอและสวีทหนึ่งห้องนอนแบบตกแต่งพร้อมเข้าอยู่ และอธิบายสี่โปรแกรม ตัวเลขด้านล่างคัดจากหน้านั้น หลายจุดระบุว่าไม่ผูกพันและขอสงวนการเปลี่ยนแปลง หน้านี้ไม่ทราบว่าห้องใดกำลังขาย</p>
+        <div class="warn en">The sale page itself only says: contact +66 (0)84 009 7009 or email. It does not list unit numbers or a current price list.</div>
+        <div class="warn th">หน้าขายเองเขียนเพียงว่าให้ติดต่อ +66 (0)84 009 7009 หรืออีเมล ไม่มีเลขห้องหรือรายการราคาปัจจุบัน</div>
+        <div class="stack">
+          <article class="glass-card pair">
+            <div>
+              <h3><span class="en">Buy to let</span><span class="th">ซื้อเพื่อปล่อยเช่า</span></h3>
+              <p class="en">The site says rental management finds tenants at the published rate, handles arrival, check-in, check-out, cleaning and maintenance, collects rent, emails a monthly statement, and transfers funds to a local or overseas account. It says a Thai bank account can be opened even as a tourist, and to ask for details. Commission: 10% plus VAT (0.7%) of rental income. VAT 7% is already in the rental rates. The example says profit ignores maintenance and taxes, and that 100% occupancy is likely only on contracts of three months and up.</p>
+              <p class="th">เว็บไซต์ระบุว่าฝ่ายบริหารการเช่าหาผู้เช่าในอัตราที่เผยแพร่ ดูแลการมาถึง เช็คอิน เช็คเอาต์ ความสะอาด และการซ่อมบำรุง เก็บค่าเช่า ส่งสเตตเมนต์รายเดือนทางอีเมล และโอนเงินเข้าบัญชีในไทยหรือต่างประเทศ ระบุว่าเปิดบัญชีธนาคารไทยได้แม้เป็นนักท่องเที่ยว และให้สอบถามรายละเอียด ค่าคอมมิชชัน 10% บวกแวต (0.7%) ของรายได้ค่าเช่า แวต 7% รวมอยู่ในค่าเช่าแล้ว ตัวอย่างระบุว่าการคำนวณกำไรไม่รวมค่าส่วนกลางและภาษี และอัตราเข้าพัก 100% น่าจะเกิดเฉพาะสัญญาสามเดือนขึ้นไป</p>
+            </div>
+            <button type="button" data-shot data-caption="Published example rental statement" data-caption-th="ตัวอย่างสเตตเมนต์ค่าเช่าที่เผยแพร่" style="padding:0;border:0;background:none;cursor:pointer"><img src="images/invest/statement.jpg" alt="Published example rental statement" style="width:100%;border-radius:12px" /></button>
+          </article>
+          <article class="glass-card">
+            <h3><span class="en">Their studio example</span><span class="th">ตัวอย่างสตูดิโอของเว็บไซต์</span></h3>
+            <p class="fine en">Sales price in the example: 1,590,000 baht, marked not binding. Exchange rates on the retire and under-50 pages: 1 euro = 39 baht, 1 US dollar = 33 baht.</p>
+            <p class="fine th">ราคาขายในตัวอย่าง 1,590,000 บาท และระบุว่าไม่ผูกพัน อัตราแลกเปลี่ยนในหน้าเกษียณและแผนอายุต่ำกว่า 50: 1 ยูโร = 39 บาท, 1 ดอลลาร์สหรัฐ = 33 บาท</p>
+            <div class="table-wrap">
+              <table class="data">
+                <thead><tr><th class="en">How the example rents it</th><th class="th">วิธีเช่าในตัวอย่าง</th><th class="en">Per month</th><th class="th">ต่อเดือน</th><th class="en">Per year</th><th class="th">ต่อปี</th><th class="en">They state</th><th class="th">ที่ระบุ</th></tr></thead>
+                <tbody>
+                  <tr><td class="en">Daily · 1,050 × 30, before a 150 baht cleaning charge per day</td><td class="th">รายวัน · 1,050 × 30 ก่อนหักค่าทำความสะอาด 150 บาทต่อวัน</td><td>฿31,500</td><td>฿378,000</td><td>23.77%</td></tr>
+                  <tr><td class="en">1–3 months</td><td class="th">1–3 เดือน</td><td>฿14,900</td><td>฿178,800</td><td>11.24%</td></tr>
+                  <tr><td class="en">3 months and up</td><td class="th">3 เดือนขึ้นไป</td><td>฿13,500</td><td>฿162,000</td><td>10.19%</td></tr>
+                  <tr><td class="en">Their average</td><td class="th">ค่าเฉลี่ยที่ระบุ</td><td>฿19,967</td><td>฿239,600</td><td>15.07%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <div class="cols cols-2">
+            <article class="glass-card">
+              <h3><span class="en">Retire plan</span><span class="th">แผนเกษียณ</span></h3>
+              <p class="en">The page says a retirement visa, as they describe it, needs 800,000 baht a year or 67,000 baht a month, about 1,950 US dollars or 1,700 euro. Their example: retire at 53 with about 150,000 euro (200,000 US dollars), buy four MAXXCENTRAL studios, and receive between 54,000 and 126,000 baht a month (1,385–3,230 euro, or 1,636–3,818 US dollars). They say the low end is “at least.”</p>
+              <p class="th">หน้าระบุว่าวีซ่าเกษียณตามที่พวกเขาอธิบายต้องมี 800,000 บาทต่อปี หรือ 67,000 บาทต่อเดือน ประมาณ 1,950 ดอลลาร์สหรัฐ หรือ 1,700 ยูโร ตัวอย่างของพวกเขา: เกษียณตอนอายุ 53 ด้วยเงินราว 150,000 ยูโร (200,000 ดอลลาร์สหรัฐ) ซื้อสตูดิโอแมกซ์เซ็นทรัลสี่ห้อง แล้วได้ระหว่าง 54,000 ถึง 126,000 บาทต่อเดือน (1,385–3,230 ยูโร หรือ 1,636–3,818 ดอลลาร์สหรัฐ) โดยระบุว่าช่วงต่ำคือ “อย่างน้อย”</p>
+              <button type="button" data-shot data-caption="Retire plan photograph" data-caption-th="ภาพแผนเกษียณ" style="margin-top:.6rem;padding:0;border:0;background:none;cursor:pointer"><img src="images/invest/retirement.jpg" alt="Published retire-plan photograph" style="border-radius:12px;width:min(100%,360px)" /></button>
+            </article>
+            <article class="glass-card">
+              <h3><span class="en">Under 50 plan</span><span class="th">แผนอายุต่ำกว่า 50</span></h3>
+              <p class="en">For someone too young for the retirement visa they describe. Example: buy four studios and they open a condominium rental company. They say that supports a work permit, a salary of at least 50,000 baht from rental income they put between 50,000 and 120,000 baht a month, a one-year visa, social insurance, and “a good reputation.”</p>
+              <p class="th">สำหรับผู้ที่ยังอายุไม่ถึงวีซ่าเกษียณตามที่พวกเขาอธิบาย ตัวอย่าง: ซื้อสี่สตูดิโอแล้วพวกเขาเปิดบริษัทให้เช่าคอนโดให้ ระบุว่าได้ใบอนุญาตทำงาน เงินเดือนอย่างน้อย 50,000 บาทจากรายได้ค่าเช่าที่พวกเขาวางไว้ระหว่าง 50,000 ถึง 120,000 บาทต่อเดือน วีซ่าหนึ่งปี ประกันสังคม และ “ชื่อเสียงที่ดี”</p>
+              <button type="button" data-shot data-caption="Under 50 plan photograph" data-caption-th="ภาพแผนอายุต่ำกว่า 50" style="margin-top:.6rem;padding:0;border:0;background:none;cursor:pointer"><img src="images/invest/invest3.jpg" alt="Published under-50 photograph" style="border-radius:12px;width:100%" /></button>
+            </article>
+          </div>
+          <article class="glass-card">
+            <h3><span class="en">Fixed 7.85% a year</span><span class="th">ดอกเบี้ยคงที่ 7.85% ต่อปี</span></h3>
+            <p class="en">Their story: some buyers want financing; they say foreign buyers rarely get a Thai housing loan even near 9%. Example purchase 1,290,000 baht, 30% down (390,000), loan 900,000 repaid in 180 monthly instalments of 9,590 baht. They split that as interest 5,887.50 baht a month (7.85% a year), principal, and a 2.0% handling fee. An investor of 900,000 baht is said to receive 5,887.50 baht a month; 70,650 baht a year, and with compound interest “higher than 8%.” Minimum 250,000 baht, minimum 12 months, withdrawal on 6 weeks’ notice with a 3% fee on the amount withdrawn. A separate example: 1,000,000 baht on 10 January earns 78,500 baht a year, paid as 6,541.66 baht from 10 February. They say the fund is collective, backed by the buyer’s property and the title kept until the loan is repaid, limited until the fund closes, and only for properties MAXX owns. Phone on that page: 0066 (0)8 4009 7009.</p>
+            <p class="th">เรื่องที่พวกเขาเล่า: ผู้ซื้อบางรายต้องการสินเชื่อ และระบุว่าชาวต่างชาติแทบไม่ได้สินเชื่อบ้านไทยแม้ดอกเบี้ยเกือบ 9% ตัวอย่างซื้อ 1,290,000 บาท ดาวน์ 30% (390,000) กู้ 900,000 ผ่อน 180 งวด งวดละ 9,590 บาท พวกเขาแยกเป็นดอกเบี้ย 5,887.50 บาทต่อเดือน (7.85% ต่อปี) เงินต้น และค่าดำเนินการ 2.0% นักลงทุน 900,000 บาทจะได้ 5,887.50 บาทต่อเดือน หรือ 70,650 บาทต่อปี และถ้าคิดดอกทบต้น “สูงกว่า 8%” ขั้นต่ำ 250,000 บาท อย่างน้อย 12 เดือน ถอนได้เมื่อบอกกล่าวล่วงหน้า 6 สัปดาห์ โดยมีค่าธรรมเนียม 3% ของจำนวนที่ถอน อีกตัวอย่าง: ลงทุน 1,000,000 บาทวันที่ 10 มกราคม ได้ 78,500 บาทต่อปี จ่าย 6,541.66 บาทตั้งแต่วันที่ 10 กุมภาพันธ์ ระบุว่ากองทุนเป็นกองรวม มีห้องของผู้ซื้อค้ำ และเก็บโฉนดจนกว่าจะชำระครบ ข้อเสนอจำกัดจนกองทุนจะปิด และใช้ได้เฉพาะทรัพย์ที่แมกซ์เป็นเจ้าของ โทรในหน้านั้น 0066 (0)8 4009 7009</p>
+            <div class="cols cols-2" style="margin-top:.7rem">
+              <button type="button" data-shot data-caption="Buy and invest photograph" data-caption-th="ภาพซื้อและลงทุน" style="padding:0;border:0;background:none;cursor:pointer"><img src="images/invest/buyinvest.jpg" alt="Published buy and invest photograph" style="width:100%;border-radius:12px" /></button>
+              <button type="button" data-shot data-caption="Fixed-plan photograph" data-caption-th="ภาพแผนดอกเบี้ยคงที่" style="padding:0;border:0;background:none;cursor:pointer"><img src="images/invest/invest1.jpg" alt="Published fixed-interest photograph" style="width:100%;border-radius:12px" /></button>
+            </div>
+          </article>
+          <div class="cols cols-2">
+            <button type="button" data-shot data-caption="Condos for sale photograph" data-caption-th="ภาพคอนโดสำหรับขาย" style="padding:0;border:0;background:none;cursor:pointer"><img src="images/invest/condo_sale.jpg" alt="Published condos-for-sale photograph" style="width:100%;border-radius:14px" /></button>
+            <button type="button" data-shot data-caption="Buy-to-let photograph" data-caption-th="ภาพซื้อเพื่อปล่อยเช่า" style="padding:0;border:0;background:none;cursor:pointer"><img src="images/invest/buyforrent.jpg" alt="Published buy-to-let photograph" style="width:100%;border-radius:14px" /></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="location">
+      <div class="wrap">
+        <div class="kicker"><span>07</span><em class="en">Pattaya City</em><em class="th">พัทยา</em></div>
+        <h2><span class="en">3rd Road, Soi 14.</span><span class="th">ถนนสายสาม ซอย 14</span></h2>
+        <p class="lede en">The site calls this Pattaya’s most sought-after city location, on Pattaya 3rd Road near Soi Buakhao: central, and still described as quiet and secure. A minimart, 7-Eleven and restaurants are at the door. Walking distance reaches Soi Buakhao, Central Festival and Pattaya Beach. Postal code on the contact page: 20150.</p>
+        <p class="lede th">เว็บไซต์เรียกที่นี่ว่าทำเลในเมืองพัทยาที่เป็นที่ต้องการ บนถนนพัทยาสายสามใกล้ซอยบัวขาว ใจกลางเมือง และยังบรรยายว่าเงียบและปลอดภัย มินิมาร์ท เซเว่น และร้านอาหารอยู่หน้าประตู เดินถึงซอยบัวขาว เซ็นทรัลเฟสติวัล และหาดพัทยา รหัสไปรษณีย์ในหน้าติดต่อคือ 20150</p>
+        <div class="map-frame">
+          <iframe title="MAXXCENTRAL on OpenStreetMap" src="https://www.openstreetmap.org/export/embed.html?bbox=100.878%2C12.924%2C100.904%2C12.938&amp;layer=mapnik&amp;marker=12.930205%2C100.891201" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="fine en" style="margin-top:.45rem">Marker at 12.930205, 100.891201, the coordinate published with the property name on the site’s map. The old map also pinned other businesses; this plate shows only MAXXCENTRAL.</p>
+        <p class="fine th" style="margin-top:.45rem">หมุดที่ 12.930205, 100.891201 พิกัดที่เผยแพร่คู่กับชื่ออาคารบนแผนที่ของเว็บ แผนที่เดิมปักธุรกิจอื่นด้วย แผ่นนี้แสดงเฉพาะแมกซ์เซ็นทรัล</p>
+        <div class="cols cols-2" style="margin-top:1rem">
+          <article class="glass-card">
+            <h3><span class="en">Distances they print</span><span class="th">ระยะทางที่ระบุ</span></h3>
+            <ul class="dist">
+              <li><span class="en">Third Road</span><span class="th">ถนนสายสาม</span><b>90 m</b></li>
+              <li><span class="en">Soi Buakhao market &amp; entertainment</span><span class="th">ตลาดและความบันเทิงซอยบัวขาว</span><b>500 m</b></li>
+              <li><span class="en">Central Festival Beach</span><span class="th">เซ็นทรัลเฟสติวัลบีช</span><b>800 m</b></li>
+              <li><span class="en">Pattaya Beach Road</span><span class="th">ถนนเลียบหาดพัทยา</span><b>1,100 m</b></li>
+              <li><span class="en">Walking Street</span><span class="th">วอล์กกิ้งสตรีท</span><b>2,200 m</b></li>
+              <li><span class="en">Big C Extra, Central Road</span><span class="th">บิ๊กซีเอ็กซ์ตร้า ถนนสายกลาง</span><b>600 m</b></li>
+              <li><span class="en">Foodland and Harbour Mall</span><span class="th">ฟู้ดแลนด์และฮาร์เบอร์มอลล์</span><b>800 m</b></li>
+            </ul>
+          </article>
+          <article class="glass-card">
+            <h3><span class="en">Also named nearby</span><span class="th">ที่ระบุว่าอยู่ใกล้</span></h3>
+            <ul class="clean">
+              <li>Soi Buakhao</li>
+              <li>Pattaya Klang</li>
+              <li>Big C Extra</li>
+              <li>Foodland</li>
+              <li>Harbour Mall</li>
+              <li class="en">Central Festival Beach (800 m)</li>
+              <li class="th">เซ็นทรัลเฟสติวัลบีช (800 ม.)</li>
+            </ul>
+            <p class="fine en" style="margin-top:.7rem">Address: MAXXCENTRAL, 3rd Road Soi 14, 20150 Pattaya-City.</p>
+            <p class="fine th" style="margin-top:.7rem">ที่อยู่: แมกซ์เซ็นทรัล ซอย 14 ถนนสายสาม พัทยา 20150</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="kicker"><span>08</span><em class="en">Desk</em><em class="th">เคาน์เตอร์</em></div>
+        <h2><span class="en">Call, or write it here.</span><span class="th">โทร หรือเขียนไว้ที่นี่</span></h2>
+        <p class="lede en">The site asks you to call or use the form for renting, financing, buying or investing, and says they will reply. This copy of the form never leaves the browser.</p>
+        <p class="lede th">เว็บไซต์ให้โทรหรือใช้แบบฟอร์มสำหรับเช่า การเงิน ซื้อ หรือลงทุน และบอกว่าจะตอบกลับ แบบฟอร์มชุดนี้ไม่ออกจากเบราว์เซอร์</p>
+        <div class="contact-grid">
+          <article class="glass-card">
+            <h3>MAXXCENTRAL</h3>
+            <address>
+              <span class="en">3rd Road Soi 14<br />20150 Pattaya-City</span>
+              <span class="th">ซอย 14 ถนนสายสาม<br />พัทยา 20150</span>
+            </address>
+            <div class="phones">
+              <a href="tel:+6638414400">+66 (0)38 414 400</a>
+              <a href="tel:+66840097009">+66 (0)84 009 7009</a>
+              <span class="fine"><span class="en">Fax</span><span class="th">แฟกซ์</span> +66 (0)38 414 422</span>
+              <a href="mailto:contact@maxxcentral.com">contact@maxxcentral.com</a>
+              <span class="fine">www.maxxcentral.com</span>
+            </div>
+            <p class="fine en" style="margin-top:.8rem">The contact page also prints the mobile as +66 (0)8 4009 7009. Same number.</p>
+            <p class="fine th" style="margin-top:.8rem">หน้าติดต่อพิมพ์มือถือเป็น +66 (0)8 4009 7009 เป็นเบอร์เดียวกัน</p>
+            <button type="button" data-shot data-caption="Booking page photograph" data-caption-th="ภาพจากหน้าจอง" style="margin-top:.8rem;padding:0;border:0;background:none;cursor:pointer;width:100%"><img src="images/booking1.jpg" alt="Photograph from the booking page" style="width:100%;border-radius:12px" /></button>
+          </article>
+          <form class="inquiry glass-card" id="inquiry" novalidate>
+            <fieldset>
+              <legend><span class="en">Renting</span><span class="th">เช่า</span></legend>
+              <div class="checks">
+                <label><input type="radio" name="rent" value="suite" /> <span class="en">One-bedroom suite</span><span class="th">สวีทหนึ่งห้องนอน</span></label>
+                <label><input type="radio" name="rent" value="studio" /> <span class="en">Studio</span><span class="th">สตูดิโอ</span></label>
+              </div>
+              <div class="grid-2" style="margin-top:.6rem">
+                <label><span class="en">From</span><span class="th">จาก</span><input type="date" name="rent_from" /></label>
+                <label><span class="en">Until</span><span class="th">ถึง</span><input type="date" name="rent_until" /></label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><span class="en">Financing</span><span class="th">การเงิน</span></legend>
+              <div class="checks">
+                <label><input type="radio" name="finance" value="suite" /> <span class="en">One-bedroom suite</span><span class="th">สวีทหนึ่งห้องนอน</span></label>
+                <label><input type="radio" name="finance" value="studio" /> <span class="en">Studio</span><span class="th">สตูดิโอ</span></label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><span class="en">Buying</span><span class="th">ซื้อ</span></legend>
+              <div class="checks">
+                <label><input type="radio" name="buy" value="suite" /> <span class="en">One-bedroom suite</span><span class="th">สวีทหนึ่งห้องนอน</span></label>
+                <label><input type="radio" name="buy" value="studio" /> <span class="en">Studio</span><span class="th">สตูดิโอ</span></label>
+              </div>
+              <label style="margin-top:.55rem"><span class="en">Condo number, if you have one</span><span class="th">เลขห้อง ถ้ามี</span><input type="text" name="condo_no" maxlength="40" /></label>
+            </fieldset>
+            <fieldset>
+              <legend><span class="en">Investing</span><span class="th">ลงทุน</span></legend>
+              <div class="checks">
+                <label><input type="checkbox" name="invest" value="let" /> <span class="en">Buy for rent</span><span class="th">ซื้อเพื่อปล่อยเช่า</span></label>
+                <label><input type="checkbox" name="invest" value="fix" /> <span class="en">7.85% fixed interest a year</span><span class="th">ดอกเบี้ยคงที่ 7.85% ต่อปี</span></label>
+                <label><input type="checkbox" name="invest" value="retire" /> <span class="en">Retire plan</span><span class="th">แผนเกษียณ</span></label>
+                <label><input type="checkbox" name="invest" value="u50" /> <span class="en">Under 50 plan</span><span class="th">แผนอายุต่ำกว่า 50</span></label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><span class="en">Your details</span><span class="th">ข้อมูลของคุณ</span></legend>
+              <div class="grid-2">
+                <label><span class="en">Salutation</span><span class="th">คำนำหน้า</span>
+                  <select name="salutation">
+                    <option value=""></option>
+                    <option value="mr">Mr · นาย</option>
+                    <option value="mrs">Mrs · นาง</option>
+                  </select>
+                </label>
+                <label><span class="en">Name</span><span class="th">ชื่อ</span><input type="text" name="name" required maxlength="120" /></label>
+                <label><span class="en">Country</span><span class="th">ประเทศ</span><input type="text" name="country" required maxlength="80" /></label>
+                <label><span class="en">Email</span><span class="th">อีเมล</span><input type="email" name="email" required maxlength="160" /></label>
+                <label><span class="en">Phone</span><span class="th">โทรศัพท์</span><input type="tel" name="phone" maxlength="40" /></label>
+              </div>
+              <label style="margin-top:.65rem"><span class="en">Message</span><span class="th">ข้อความ</span><textarea name="message" maxlength="2000"></textarea></label>
+            </fieldset>
+            <button class="btn btn-brand" type="submit"><span class="en">Keep this note locally</span><span class="th">เก็บบันทึกไว้ในเครื่อง</span></button>
+            <p class="form-status" id="form-status" role="status"></p>
+            <p class="fine en">Nothing is emailed. Nothing is stored on a server.</p>
+            <p class="fine th">ไม่มีการส่งอีเมล และไม่เก็บบนเซิร์ฟเวอร์</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap legal">
+      <p class="en">MAXXCENTRAL Condotel · Luxury serviced condos in the heart of Pattaya City. Pictures and floor plans are for illustration only. All changes reserved. Copyright 2019 ROYALSUN Development Co. Ltd.</p>
+      <p class="th">แมกซ์เซ็นทรัล คอนโดเทล · คอนโดบริการหรูใจกลางพัทยา ภาพและแปลนใช้ประกอบเท่านั้น สงวนการเปลี่ยนแปลง ลิขสิทธิ์ 2019 บริษัท รอยัลซัน ดีเวลลอปเมนท์ จำกัด</p>
+      <p style="margin-top:.45rem"><a href="compare.html"><span class="en">Compare with the live site</span><span class="th">เทียบกับเว็บจริง</span></a></p>
+    </div>
+    <div class="vantage-footer">
+      <img src="images/vantage.png" alt="Vantage" />
+      <p class="vantage-tag">GET THE VANTAGE POINT YOU DESERVE.</p>
+      <p class="demo-note en">Front-end demo for review. Words, plans and photographs are from maxxcentral.com. Sister-brand banners are not included. Nothing was sent to the property.</p>
+      <p class="demo-note th">เดโมหน้าเว็บสำหรับตรวจ ข้อความ แปลน และภาพมาจาก maxxcentral.com ไม่ใส่แบนเนอร์แบรนด์ในเครือ ไม่ได้ส่งอะไรไปถึงที่พัก</p>
+    </div>
+  </footer>
+
+  <div class="lb" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo">
+    <button type="button" class="lb-x" id="lb-x" aria-label="Close">×</button>
+    <button type="button" class="lb-nav prev" id="lb-prev" aria-label="Previous">‹</button>
+    <button type="button" class="lb-nav next" id="lb-next" aria-label="Next">›</button>
+    <figure>
+      <img id="lb-img" alt="" />
+      <figcaption id="lb-cap"></figcaption>
+    </figure>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
